@@ -19,6 +19,11 @@ set -o nounset
 #   'latest'          -- build a box with the latest version of the provisioner
 
 case "${PROVISIONER}" in
+  'puppet')
+    echo "Installing Puppet via apt-get"
+    sudo apt-get -y install puppet
+    ;;
+
   'chef')
     if [[ ${PROVISIONER_VERSION} == 'latest' ]]; then
       echo "Installing latest Chef version"
