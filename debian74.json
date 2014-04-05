@@ -55,6 +55,6 @@
   "post-processors": [{
     "type": "vagrant",
     "keep_input_artifact": false,
-    "output": "../../{{.Provider}}/debian74-{{user `provisioner`}}.box"
+    "output": "images/debian74-{{user `provisioner`}}.box"
   }]
 }
